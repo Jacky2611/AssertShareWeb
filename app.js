@@ -58,6 +58,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 //routes:
 var indexRouter = require('./routes/index');
 var authenticationRouter = require('./routes/authentication')
+var libraryRouter = require('./routes/library');
+var blogRouter = require('./routes/blog');
 var profileRouter = require('./routes/profile');
 
 //adding general data to all responses
@@ -78,6 +80,9 @@ app.use(function(req,res,next){
 app.use('/', indexRouter);
 app.use('/', authenticationRouter);
 app.use('/profile', profileRouter);
+app.use('/library', libraryRouter);
+app.use('/blog', blogRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -13,7 +13,7 @@ function test(){
 function closePopup(popupID){
     console.log("closing popup: "+popupID);
     var popup = document.getElementById(popupID);
-    popup.style.visibility='hidden';
+    popup.style.display='none';
 
 }
 
@@ -32,7 +32,7 @@ function showPopup(popupID){
 
     console.log("showing popup: "+popupID);
     var popup = document.getElementById(popupID);
-    popup.style.visibility='visible';
+    popup.style.display='block';
 
 }
 

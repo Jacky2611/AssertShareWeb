@@ -15,7 +15,7 @@ html
     
     block navbar
       header
-        a(href='/'): img.logoSmallLeft(src="/images/logoSmall.png" alt="AssetShare")
+        a(href='/'): img.header-logo(src="/images/logoSmall.png" alt="AssetShare")
         div#navbar-items
           a(href='/library') LIBRARY
           a(href='/blog') BLOG
@@ -28,7 +28,7 @@ html
             a(href='#' onclick='showPopup(\'popup-login\')') LOGIN
             a.button(href='#' onclick='showPopup(\'popup-register\')') REGISTER
     
-    div#content-wrapper
+    div.content-wrapper
       block content
 
     block footer

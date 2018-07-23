@@ -1,7 +1,21 @@
 extends layout
 
 block content
-  h1=title
-  p Welcome to #{title} #{authenticated}. In the future there will be images and snippets of text here. Feel free to add them yourself in the github repo.'
-  if authenticated
-    p #{email} and username: #{username}
+  .display-flex-column
+    .flex.height-500px.bg-grey.display-flex-column.flex-align-center.flex-justify-content-center
+      h1 Welcome to Asset Share
+      h3 The #1 Website for sharing PBR materials, models and more.
+      br
+      br
+      br
+      br
+    .display-flex-row.height-500px
+      .display-flex-column.flex.flex-align-center.flex-justify-content-center
+        p Some random text.
+      .display-flex-column.flex.flex-align-center.flex-justify-content-center
+        p Image here
+    .display-flex-row.height-500px
+      .display-flex-column.flex.flex-align-center.flex-justify-content-center
+        p Image here.
+      .display-flex-column.flex.flex-align-center.flex-justify-content-center
+        p Some random text
