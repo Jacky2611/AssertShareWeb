@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    block head
+      meta(charset='utf-8')
+      title= title
+      include stylesheets.pug
+      include scripts.pug
+  
+  body
+
+    block popup
+      include popup-login.pug
+      include popup-register.pug
+    
+    block navbar
+      header
+        a(href='/'): img.logoSmallLeft(src="/images/logoSmall.png" alt="AssetShare")
+        div#navbar-items
+          a(href='/library') LIBRARY
+          a(href='/blog') BLOG
+          a(href='/gallery') GALLERY
+        div#navbar-account
+          if authenticated
+            a(href='/logout') LOGOUT
+            a.button(href='/profile') #{username}
+          else
+            a(href='#' onclick='showPopup(\'popup-login\')') LOGIN
+            a.button(href='#' onclick='showPopup(\'popup-register\')') REGISTER
+    
+    div#content-wrapper
+      block content
+
+    block footer
+      footer
+        p This is the footer

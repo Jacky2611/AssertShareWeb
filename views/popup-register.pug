@@ -1,0 +1,24 @@
+extends popup
+
+block vars
+  - var popupID = 'popup-register';
+
+block popup-content
+    a(href='http://www.gravatar.com')
+        img(src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&s=140" id="image-register-avatar")
+    form(action='/register' method='post')
+        div.label-placeholder
+            input(type="text" name="username" required)
+            label(for='username') Name
+        div.label-placeholder
+            input(type="email" name="email" id="input-register-email" required)
+            label(for='email') Email
+        div.label-placeholder
+            input(type="password" name="password" id="input-register-pw1" required)
+            label(for='password') Password
+        div.label-placeholder
+            input(type="password" name="passwordConf" id="input-register-pw2" required)
+            label(for='passwordConf') Password
+        div.label-placeholder
+            input(type="submit" value="Register")
+

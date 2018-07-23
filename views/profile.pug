@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1=profilename
+  p Welcome to the profile of #{profilename}. In the future there will be a list of all assets uploaded by this user here. Feel free to add them yourself in the github repo.'
+  if owner
+    span You are the owner of this profile. Additional options are visible
+    

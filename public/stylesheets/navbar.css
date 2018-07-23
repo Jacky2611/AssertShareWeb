@@ -1,0 +1,53 @@
+header {
+    /* css for navbar and children. NOT for Site Layout */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    padding-left: 20px;
+    padding-right: 20px;
+  
+    background:black;
+    color:#ccc;
+}
+
+/* making sure that all childern are positioned properly*/
+header a {
+    margin-right: auto;
+}
+#navbar-items {
+    position: absolute;
+    /*  As it is out-of-flow, an absolutely-positioned child of a flex container does not participate in flex layout.
+        The static position of an absolutely-positioned child of a flex container is determined such that the child is positioned as if it were the sole flex item in the flex container */
+}
+#navbar-account {
+    margin-left: auto;
+}
+
+
+#navbar-items a{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    color:white;
+    text-decoration: none;
+}
+
+#navbar-account a{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    color:white;
+    text-decoration: none;
+}
+
+#navbar-account a.button{
+    font: 24px Arial;
+    text-decoration: none;
+    background: -moz-linear-gradient(45deg, #0090d8 0%, #00ffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, #0090d8 0%,#00ffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg, #0090d8 0%,#00ffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    color: white;
+    padding: 4px 8px 4px 8px;
+    border-radius: 25px;
+}

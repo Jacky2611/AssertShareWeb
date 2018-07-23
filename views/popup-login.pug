@@ -1,0 +1,17 @@
+extends popup
+
+block vars
+  - var popupID = 'popup-login';
+
+block popup-content
+    a(href='http://www.gravatar.com')
+        img(src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&s=140" id="image-login-avatar")
+    form(action='/login' method='post')
+        div.label-placeholder
+            input(type="email" name="email" id="input-login-email" required)
+            label(for='email') Email
+        div.label-placeholder
+            input(type="password" name="password" required)
+            label(for='password') Password
+        div.label-placeholder
+            input(type="submit" value="Login")

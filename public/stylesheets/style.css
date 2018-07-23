@@ -1,0 +1,41 @@
+html, body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  min-height:100%;height:100%; width:100%; margin:0px;padding:0px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+header {
+  box-sizing: border-box;
+  position:fixed;
+  top:0px;
+  text-align:center;
+  width:100%;
+  height:70px;
+}
+
+#content-wrapper{
+  min-height:100%;
+  height:300px;
+  background:#1a1a1a;
+  text-align:center;
+  color:#FFF;
+  margin-bottom: -70px; /* important to make sure that there is enough space for the footer. Always make sure that this is -FOOTER HEIGHT */
+}
+
+#content-wrapper:before {
+  content: "";
+  display: block;
+  height: 70px;
+}
+footer, #content-wrapper:after {
+  height: 70px; /* this variable must be -margin-bottom of content wrapper*/
+}
+
+footer{
+  background:#1f1f1f;
+  display:block;
+  overflow: hidden;
+}

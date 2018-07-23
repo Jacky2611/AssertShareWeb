@@ -1,0 +1,9 @@
+-var popupID = '';
+block vars
+
+div(class='popup' id=popupID style='visibility:hidden')
+    div.popup-top
+        div.popup-name
+        a(href='#' onclick='closePopup(\''+popupID+'\')') ✖
+    div.popup-content
+        block popup-content
