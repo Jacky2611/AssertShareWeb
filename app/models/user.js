@@ -2,6 +2,9 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 var crypto = require('crypto');
 
+//Look into creating a Permission Enum in the enums folder:
+//https://stackoverflow.com/questions/43000451/javascript-es6-enums-inside-classes-used-outside-like-a-static-enum
+//https://www.sohamkamani.com/blog/2017/08/21/enums-in-javascript/
 
 var UserSchema = new mongoose.Schema({
   email: {
