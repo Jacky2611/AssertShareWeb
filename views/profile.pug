@@ -1,8 +1,12 @@
 extends layout
 
 block content
-  h1=profilename
-  p Welcome to the profile of #{profilename}. In the future there will be a list of all assets uploaded by this user here. Feel free to add them yourself in the github repo.'
-  if owner
-    span You are the owner of this profile. Additional options are visible
-    
+  .flex-center.full-height.width-90.display-flex-column
+    .display-flex-row.flex-align-center.flex-justify-content-start
+      h1 #{profilename} &nbsp;&nbsp;
+      if owner
+        a(href="/profile/" + userId +"/") Public profile 
+    p Welcome to the profile of #{profilename}. In the future there will be a list of all assets uploaded by this user here. Feel free to add them yourself in the github repo.'
+    if owner
+      span You are the owner of this profile. Additional options are visible. You userid is: #{userId}
+      

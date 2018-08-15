@@ -90,7 +90,7 @@ $(document).ready(function(){
     
     function validatePassword(){
       if(registerPassword.val() != registerConfirmPassword.val()) {
-        registerConfirmPassword[0].setCustomValidity("Passwords Don't Match");
+        registerConfirmPassword[0].setCustomValidity("Passwords don't Match");
       } else {
         registerConfirmPassword[0].setCustomValidity('');
       }

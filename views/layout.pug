@@ -23,7 +23,12 @@ html
         div#navbar-account
           if authenticated
             a(href='/logout') LOGOUT
-            a.button(href='/profile') #{username}
+            a(href='/profile').display-flex-column.flex-align-center
+              img.border-radius-100(src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&s=64" id="image-header-avatar")
+              script.
+                $(document).ready( function() {
+                  updateHeaderAvatar('#{email}');
+                });
           else
             a(href='#' onclick='showPopup(\'popup-login\')') LOGIN
             a.button(href='#' onclick='showPopup(\'popup-register\')') REGISTER
@@ -33,4 +38,5 @@ html
 
     block footer
       footer
-        p This is the footer
+        p This is the footer.
+        p in the future there will be more content here.

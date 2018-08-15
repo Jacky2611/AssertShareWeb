@@ -70,7 +70,7 @@ UserSchema.statics.authenticate = function (email, password, callback) {
             if(user.verified_email){
               return callback(null, user);
             } else {
-              var err = new Error('Email not verified.');
+              var err = new Error('You have not verified your email.');
               err.status = 401;
               return callback(err);
             }

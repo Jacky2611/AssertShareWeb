@@ -36,7 +36,7 @@ header {
   flex: 1 0 auto; /* 2 */
   padding: var(--space) var(--space) 0;
   width: 100%;
-  background:#0C0C0C;
+  background:#202020;
   text-align:center;
   color:#FFF;
   text-align:left;
@@ -52,7 +52,8 @@ footer{
   display: block;
   height: 70px;
   bottom:0px;
-  background:#1f1f1f;
+  background:#111111;
+  color:#AAA;
   overflow: hidden;
 }
 
@@ -62,6 +63,9 @@ footer{
 
 }
 
+.border-radius-100{
+  border-radius: 100%;
+}
 
 .display-flex-row{
   display: flex;
@@ -97,6 +101,9 @@ footer{
 .width-80{
   width:80%;
 }
+.width-90{
+  width:90%;
+}
 .width-150px{
   width:150px;
 }
@@ -107,6 +114,10 @@ footer{
   height:500px;
 }
 
+
+.flex-justify-content-start{
+  justify-content:flex-start;
+}
 
 .flex-justify-content-center{
   justify-content:center;

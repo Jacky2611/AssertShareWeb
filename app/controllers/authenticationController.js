@@ -21,7 +21,7 @@ exports.register = function(req, res, next) {
         if (err) {
           return next(err)
         } else {
-          return res.redirect('/profile');
+          return res.redirect('/');
         }
       });
     }

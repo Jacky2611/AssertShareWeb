@@ -22,6 +22,9 @@ header a {
 }
 #navbar-account {
     margin-left: auto;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
 }
 
 

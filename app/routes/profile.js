@@ -7,6 +7,6 @@ const profileController = require('../controllers/profileController')
 router.get('/', mid.requiresLogin, profileController.show_own_profile);
 
 //Show public profile
-router.get('/:profileID', profileController.show_public_profile);
+router.get('/:userId', profileController.show_public_profile);
 
 module.exports = router;
