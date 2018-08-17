@@ -1,0 +1,15 @@
+h1.profile-name{
+    font-size: 3em;
+    margin: 10px 20px 10px 0;
+}
+
+.user-metadata{
+    color: #A0A0A0;
+}
+.user-metadata > *{
+    padding-right: 20px;
+}
+
+.profile-gallery{
+    padding: 20px;
+}

@@ -1,11 +1,36 @@
 extends layout
 
+block append head
+  link(rel='stylesheet', href='/css/profile.css')
+
+
 block content
   .flex-center.full-height.width-90.display-flex-column
+    .display-flex-row
+      img.border-radius-100.margin-top-50px(src="https://www.gravatar.com/avatar/"+ hashed_profile_email + "?d=mp&s=128" id="image-profile-avatar")
     .display-flex-row.flex-align-center.flex-justify-content-start
-      h1 #{profilename} &nbsp;&nbsp;
-      if owner
-        a(href="/profile/" + userId +"/") Public profile 
+      if blocked
+        del
+          h1.profile-name #{profilename}
+        h2 Account blocked     
+      else
+        h1.profile-name #{profilename}      
+        if owner
+          a(href="/profile/" + userId +"/") Public profile
+    .display-flex-row.user-metadata
+        span Joined: #{join_date}
+        span Karma: 0
+        span Rank: User
+    h3.margin-top-50px HDRIs:
+    .display-flex-row.profile-gallery.bg-black
+      p This user hasn't uploaded any HDRIs yet.
+    h3.margin-top-30px Materials:
+    .display-flex-row.profile-gallery.bg-black
+      p This user hasn't uploaded any Materials yet.
+    h3.margin-top-30px Models:
+    .display-flex-row.profile-gallery.bg-black
+      p This user hasn't uploaded any Models yet.
+
     p Welcome to the profile of #{profilename}. In the future there will be a list of all assets uploaded by this user here. Feel free to add them yourself in the github repo.'
     if owner
       span You are the owner of this profile. Additional options are visible. You userid is: #{userId}

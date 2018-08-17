@@ -33,6 +33,10 @@ var UserSchema = new mongoose.Schema({
       type: Boolean,
       default: false
   },
+  account_blocked: {
+    type: Boolean,
+    default: false
+  },
   email_verification_token: {
     type: String,
     default: function() {
@@ -65,13 +69,18 @@ UserSchema.statics.authenticate = function (email, password, callback) {
           err.status = 400;
           return callback(err);
         }
+        if(user.account_blocked){
+          var err = new Error('This account has been blocked. Please contact our staff.');
+          err.status = 403;
+          return callback(err);
+        }
         bcrypt.compare(password, user.password, function (err, result) {
           if (result === true) {
             if(user.verified_email){
               return callback(null, user);
             } else {
               var err = new Error('You have not verified your email.');
-              err.status = 401;
+              err.status = 403;
               return callback(err);
             }
           
@@ -118,6 +127,8 @@ UserSchema.statics.verifyEmail = function (id, token, callback) {
 
 }
 
+
+/*
 //hashing a password before saving it to the database. save is only called the first time this object is created. 
 UserSchema.pre('save', function (next) {
     var user = this;
@@ -135,7 +146,7 @@ UserSchema.pre('save', function (next) {
 
 });
 
-
+*/
 
 var UserModel = mongoose.model('User', UserSchema);
 module.exports = UserModel;

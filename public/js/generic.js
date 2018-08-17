@@ -17,8 +17,3 @@ function get_gravatar(email, size) {
     return 'http://www.gravatar.com/avatar/' + MD5(email) + '.jpg?s=' + size+'&d=mp';
 }
 
-function updateHeaderAvatar(email){
-    var headerImageAvatar = $("#image-header-avatar");
-    headerImageAvatar.attr('src', get_gravatar(email,64));
-
-}

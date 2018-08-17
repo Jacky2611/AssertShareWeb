@@ -66,8 +66,9 @@ var profileRouter = require('./routes/profile');
 app.use(function(req,res,next){
   //check if the user is logged in
   if (req.session && req.session.userId && req.session.email) {
+    
     res.locals.authenticated = true;
-    res.locals.email = req.session.email;
+    res.locals.email_hash = req.session.email_hash;
     res.locals.username = req.session.username;
 
 

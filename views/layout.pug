@@ -24,11 +24,7 @@ html
           if authenticated
             a(href='/logout') LOGOUT
             a(href='/profile').display-flex-column.flex-align-center
-              img.border-radius-100(src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&s=64" id="image-header-avatar")
-              script.
-                $(document).ready( function() {
-                  updateHeaderAvatar('#{email}');
-                });
+              img.border-radius-100(src="https://www.gravatar.com/avatar/"+email_hash+"?d=mp&s=64" id="image-header-avatar")
           else
             a(href='#' onclick='showPopup(\'popup-login\')') LOGIN
             a.button(href='#' onclick='showPopup(\'popup-register\')') REGISTER
